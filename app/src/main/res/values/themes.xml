@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Healthary" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="solidEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:background">@drawable/solid_edit_text_style</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+
+    <style name="strokeEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:background">@drawable/stroke_edit_text_style</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:background">@drawable/button_style</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

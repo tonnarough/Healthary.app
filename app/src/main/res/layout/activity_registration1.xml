@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration1"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="475dp"
+        android:background="@drawable/background_gradient"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <View
+        android:id="@+id/logosquare"
+        android:layout_width="274dp"
+        android:layout_height="274dp"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/back_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back_button"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"/>
+
+    <TextView
+        android:id="@+id/logotext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Healthary"
+        android:textColor="@color/white"
+        android:textSize="42dp"
+        android:fontFamily="@font/open_sans_extrabold"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/logo"/>
+
+    <TextView
+        android:id="@+id/aim_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Какова ваша цель?"
+        android:textColor="@color/dark_blue"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logosquare"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/open_sans_regular"/>
+
+    <TextView
+        android:id="@+id/lose_weight"
+        style="@style/buttonStyle"
+        android:layout_height="90dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/aim_text"
+        android:text="Сбросить вес"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/maintain_weight"
+        style="@style/buttonStyle"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/lose_weight"
+        android:text="Поддерживать вес"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/gain_weight"
+        style="@style/buttonStyle"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/maintain_weight"
+        android:text="Набрать вес"
+        android:textColor="@color/white" />
+
+
+
+</RelativeLayout>

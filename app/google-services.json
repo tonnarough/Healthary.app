@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "329266401234",
+    "project_id": "healthary",
+    "storage_bucket": "healthary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329266401234:android:8a0d93f4b062649236820b",
+        "android_client_info": {
+          "package_name": "com.example.healthary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329266401234-1fev8qd5q8on2gjsfuk85qko5g4s203p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqCEs3CMZsTqd50KRE2N9uE6ooj2DvWPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329266401234-1fev8qd5q8on2gjsfuk85qko5g4s203p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
