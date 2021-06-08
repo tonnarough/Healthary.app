@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +25,8 @@ public class Authentication extends AppCompatActivity implements View.OnClickLis
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private EditText ETEmail, ETPassword;
-    private TextView registrationBtn, signedInBtn;
+    private Button signedInBtn;
+    private TextView registrationBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +39,16 @@ public class Authentication extends AppCompatActivity implements View.OnClickLis
         ETEmail = (EditText) findViewById(R.id.email_et);
         ETPassword = (EditText) findViewById(R.id.password_et);
         registrationBtn = (TextView) findViewById(R.id.register);
-        signedInBtn = (TextView) findViewById(R.id.sign_in_btn);
+        signedInBtn = (Button) findViewById(R.id.sign_in_btn);
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if(user != null){
+                if (user != null) {
                     //User is signed_in
 
-                }else{
+                } else {
                     //User is signed_out
 
                 }
@@ -57,13 +59,20 @@ public class Authentication extends AppCompatActivity implements View.OnClickLis
         signedInBtn.setOnClickListener(this);
     }
 
-    public void onClick(View v){
-        switch (v.getId()){
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.register:
                 Intent intent = new Intent(this, Registration1.class);
                 startActivity(intent);
                 break;
             case R.id.sign_in_btn:
+                if(ETEmail.getText().toString() == null){
+                    Toast.makeText(Authentication.this, "Вы не ввели адрес электронной почты", Toast.LENGTH_SHORT).show();
+                }else if(ETPassword.getText().toString() == null) {
+                    Toast.makeText(Authentication.this, "Вы не ввели пароль", Toast.LENGTH_SHORT).show();
+                }else {
+                    signedIn(ETEmail.getText().toString(), ETPassword.getText().toString());
+                }
                 break;
             default:
                 break;
@@ -71,26 +80,16 @@ public class Authentication extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    public void signedIn (String email, String password){
+    public void signedIn(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful())
-                    Toast.makeText(Authentication.this, "Авторизация прошла успешно", Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(Authentication.this, "Авторизация не выполнилась", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    public void registration (String email,String password){
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful())
-                    Toast.makeText(Authentication.this, "Авторизация прошла успешно", Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(Authentication.this, "Авторизация не выполнилась", Toast.LENGTH_SHORT).show();
+                if (task.isSuccessful()) {
+                    Intent intentSignIn = new Intent(Authentication.this, DiaryPage.class);
+                    startActivity(intentSignIn);
+                } else {
+                    Toast.makeText(Authentication.this, "Авторизация провалена", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

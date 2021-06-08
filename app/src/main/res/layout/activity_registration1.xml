@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration1"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".Registration1">
 
     <View
         android:layout_width="wrap_content"
@@ -61,27 +61,30 @@
         android:layout_marginTop="25dp"
         android:fontFamily="@font/open_sans_regular"/>
 
-    <TextView
+    <Button
         android:id="@+id/lose_weight"
         style="@style/buttonStyle"
+        app:backgroundTint="@null"
         android:layout_height="90dp"
         android:layout_marginTop="25dp"
         android:layout_below="@id/aim_text"
         android:text="Сбросить вес"
         android:textColor="@color/white" />
 
-    <TextView
+    <Button
         android:id="@+id/maintain_weight"
         style="@style/buttonStyle"
+        app:backgroundTint="@null"
         android:layout_height="90dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/lose_weight"
         android:text="Поддерживать вес"
         android:textColor="@color/white" />
 
-    <TextView
+    <Button
         android:id="@+id/gain_weight"
         style="@style/buttonStyle"
+        app:backgroundTint="@null"
         android:layout_height="90dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/maintain_weight"

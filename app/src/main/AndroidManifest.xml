@@ -22,10 +22,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".Registration2">
-        <intent-filter>
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
-    </activity>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DiaryPage">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
