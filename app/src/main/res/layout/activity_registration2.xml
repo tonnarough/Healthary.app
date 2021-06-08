@@ -108,6 +108,24 @@
         android:hint="Пол"
         android:textColorHint="@color/gray" />
 
+    <Spinner
+        android:id="@+id/daily_activity_spinner"
+        style="@style/strokeEditTextStyle"
+        android:layout_below="@+id/gender_spinner"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/gray"
+        android:hint="Активность в течении дня"
+        android:textColorHint="@color/gray" />
+
+    <Button
+        android:id="@+id/registrationBtn"
+        android:layout_below="@id/daily_activity_spinner"
+        android:layout_marginTop="20dp"
+        android:text="Создать аккаунт"
+        app:backgroundTint="@null"
+        android:textColor="@color/white"
+        style="@style/buttonStyle" />
+
 
 
 </RelativeLayout>

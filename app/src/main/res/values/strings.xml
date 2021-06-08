@@ -11,4 +11,12 @@
         <item>Мужской</item>
         <item>Женский</item>
     </string-array>
+
+    <string-array name="daily_activity">
+        <item>Минимальная</item>
+        <item>Легкая</item>
+        <item>Средняя</item>
+        <item>Высокая</item>
+        <item>Экстремальная</item>
+    </string-array>
 </resources>

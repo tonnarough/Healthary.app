@@ -77,7 +77,6 @@ public class Authentication extends AppCompatActivity implements View.OnClickLis
             default:
                 break;
         }
-
     }
 
     public void signedIn(String email, String password) {
