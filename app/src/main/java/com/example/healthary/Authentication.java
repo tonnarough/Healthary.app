@@ -66,11 +66,11 @@ public class Authentication extends AppCompatActivity implements View.OnClickLis
                 startActivity(intent);
                 break;
             case R.id.sign_in_btn:
-                if(ETEmail.getText().toString() == null){
-                    Toast.makeText(Authentication.this, "Вы не ввели адрес электронной почты", Toast.LENGTH_SHORT).show();
-                }else if(ETPassword.getText().toString() == null) {
-                    Toast.makeText(Authentication.this, "Вы не ввели пароль", Toast.LENGTH_SHORT).show();
-                }else {
+                if (ETEmail.getText().length() == 0) {
+                    Toast.makeText(Authentication.this, "Авторизация провалена", Toast.LENGTH_SHORT).show();
+                } else if (ETPassword.getText().length() == 0) {
+                    Toast.makeText(Authentication.this, "Авторизация провалена", Toast.LENGTH_SHORT).show();
+                } else {
                     signedIn(ETEmail.getText().toString(), ETPassword.getText().toString());
                 }
                 break;
